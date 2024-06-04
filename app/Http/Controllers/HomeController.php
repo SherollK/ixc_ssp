@@ -12,9 +12,9 @@ class HomeController extends Controller
         $role = Auth::user()->role;
 
         if($role == 'influencer') {
-            return view('influencer');
+            return view('Influencer.influencerDashboard');
         } if ($role =='business') {
-            return view('business');
+            return view('Business.businessDashboard');
         } else {
             return view('admin');
         }

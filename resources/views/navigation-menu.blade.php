@@ -12,9 +12,26 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+
+
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+
+                    @if(Auth::user()->role == 'business')
+
+                        <x-nav-link href="{{ route('business.campaign') }}" :active="request()->routeIs('business.campaign')">
+                            {{ __('Business Campaign') }}
+                        </x-nav-link>
+
+                    @elseif(Auth::user()->role == 'influencer')
+                        <x-nav-link href="{{ route('influencer.campaign') }}" :active="request()->routeIs('influencer.campaign')">
+                            {{ __('Influencer Campaign') }}
+                        </x-nav-link>
+                    @endif
+
+
+
                 </div>
             </div>
 

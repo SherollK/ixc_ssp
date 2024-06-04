@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BusinessController;
+use App\Http\Controllers\InfluencerController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
@@ -20,6 +22,13 @@ Route::get('/', function () {
 });
 
 Route::get('/redirects', [HomeController::class, "index"]);
+
+//Business Controller
+
+Route::get('/business/campaign', [BusinessController::class, 'showCampaign'])->name('business.campaign');
+
+//Influencer Controller
+Route::get('/influencer/campaign', [InfluencerController::class, 'showCampaign'])->name('influencer.campaign');
 
 Route::middleware([
     'auth:sanctum',
