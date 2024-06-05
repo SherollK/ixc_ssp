@@ -14,17 +14,26 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
 
 
-                    <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
+                   <!--<x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                       // {{ __('Dashboard') }}
+                    </x-nav-link>-->
 
                     @if(Auth::user()->role == 'business')
+
+                        <x-nav-link href="{{ route('business.dashboard') }}" :active="request()->routeIs('business.dashboard')">
+                            {{ __('Business Dashboard') }}
+                        </x-nav-link>
 
                         <x-nav-link href="{{ route('business.campaign') }}" :active="request()->routeIs('business.campaign')">
                             {{ __('Business Campaign') }}
                         </x-nav-link>
 
                     @elseif(Auth::user()->role == 'influencer')
+
+                        <x-nav-link href="{{ route('influencer.dashboard') }}" :active="request()->routeIs('influencer.dashboard')">
+                            {{ __('Influencer Dashboard') }}
+                        </x-nav-link>
+
                         <x-nav-link href="{{ route('influencer.campaign') }}" :active="request()->routeIs('influencer.campaign')">
                             {{ __('Influencer Campaign') }}
                         </x-nav-link>

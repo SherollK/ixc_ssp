@@ -40,7 +40,13 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('password123')
         ]);
 
+        // Seed the categories
+        $this->call([
+            CategoryTableSeeder::class,
+        ]);
+
     }
+
 
 
 }

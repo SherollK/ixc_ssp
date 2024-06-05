@@ -23,12 +23,20 @@ Route::get('/', function () {
 
 Route::get('/redirects', [HomeController::class, "index"]);
 
+
 //Business Controller
 
+Route::get('/business/dashboard', [BusinessController::class, 'showDashboard'])->name('business.dashboard');
 Route::get('/business/campaign', [BusinessController::class, 'showCampaign'])->name('business.campaign');
 
+
+
 //Influencer Controller
+
+Route::get('/influencer/dashboard', [InfluencerController::class, 'showDashboard'])->name('influencer.dashboard');
 Route::get('/influencer/campaign', [InfluencerController::class, 'showCampaign'])->name('influencer.campaign');
+
+
 
 Route::middleware([
     'auth:sanctum',
