@@ -185,6 +185,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Livewire\LivewireServiceProvider::class, // Add this line
 
         /*
          * Application Service Providers...
@@ -198,6 +199,7 @@ return [
         App\Providers\JetstreamServiceProvider::class,
 
     ],
+
 
     /*
     |--------------------------------------------------------------------------
