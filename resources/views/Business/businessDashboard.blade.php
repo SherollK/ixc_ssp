@@ -1,4 +1,6 @@
 <x-app-layout>
-    <h1>Business Dashboard</h1>
+    <div class="max-w-7xl mx-auto py-10">
+        <h2 class="text-2xl font-semibold mb-4 text-center">Business Campaigns</h2>
+        @livewire('business-campaign-list')
+    </div>
 </x-app-layout>
-
