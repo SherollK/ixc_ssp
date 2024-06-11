@@ -29,4 +29,9 @@ class Campaign extends Model
     {
         return $this->belongsTo(User::class, 'business_user_id');
     }
+
+    public function requests()
+    {
+        return $this->hasMany(CampaignRequest::class);
+    }
 }

@@ -15,6 +15,13 @@ class BusinessCampaignList extends Component
         // Fetch campaigns created by the authenticated user
         $this->campaigns = Campaign::where('business_user_id', Auth::id())->get();
     }
+
+    public function viewCampaignDetails($campaignId)
+    {
+        // Redirect the user to the campaign details page
+        return redirect()->route('business.campaigns.details', $campaignId);
+    }
+
     public function render()
     {
         return view('livewire.business-campaign-list');

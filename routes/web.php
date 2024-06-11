@@ -34,6 +34,7 @@ Route::get('/campaign/{campaign:slug}', [CampaignController::class, 'campaignDet
 
 Route::get('/business/dashboard', [BusinessController::class, 'showDashboard'])->name('business.dashboard');
 Route::get('/business/campaign', [BusinessController::class, 'showCampaign'])->name('business.campaign');
+Route::get('/business/campaigns/{campaign}', [BusinessController::class, 'showCampaignDetails'])->name('business.campaigns.details');
 
 
 
