@@ -14,4 +14,12 @@ class CampaignController extends Controller
             'campaigns' => Campaign::all()
         ]);
     }
+
+    public function campaignDetails(Campaign $campaign)
+    {
+        return view('Campaign.details',
+        [
+            'campaign' => $campaign
+        ]);
+    }
 }

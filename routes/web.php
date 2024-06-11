@@ -27,6 +27,7 @@ Route::get('/redirects', [HomeController::class, "index"]);
 
 //Campaign Controller
 Route::get('/campaign', [CampaignController::class, 'showCampaign'])->name('campaign.index');
+Route::get('/campaign/{campaign:slug}', [CampaignController::class, 'campaignDetails'])->name('campaign.details');
 
 
 //Business Controller
