@@ -19,4 +19,14 @@ class Campaign extends Model
         'start_date_time',
         'end_date_time',
     ];
+
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class, 'campaign_category');
+    }
+
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'business_user_id');
+    }
 }

@@ -18,6 +18,11 @@
                        // {{ __('Dashboard') }}
                     </x-nav-link>-->
 
+                    <x-nav-link href="{{ route('campaign.index') }}" :active="request()->routeIs('campaign.index')">
+                        {{ __('Campaign') }}
+                    </x-nav-link>
+
+
                     @if(Auth::user()->role == 'business')
 
                         <x-nav-link href="{{ route('business.dashboard') }}" :active="request()->routeIs('business.dashboard')">

@@ -13,4 +13,9 @@ class Category extends Model
         'title',
         'slug',
     ];
+
+    public function campaigns()
+    {
+        return $this->belongsToMany(Campaign::class, 'campaign_category');
+    }
 }
