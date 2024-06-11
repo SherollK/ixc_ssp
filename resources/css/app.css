@@ -5,3 +5,19 @@
 [x-cloak] {
     display: none;
 }
+
+.animate-pulseText, .animate-pulseTextDark, .animate-pulseTextGreen {
+    animation-fill-mode: both;
+}
+
+.animate-delay-xs {
+    animation-delay: 2s;
+}
+
+.animate-delay-sm {
+    animation-delay: 6s;
+}
+
+.animate-delay-md {
+    animation-delay: 9s;
+}

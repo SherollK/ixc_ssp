@@ -16,7 +16,7 @@ class HomeController extends Controller
         } if ($role =='business') {
             return view('Business.businessDashboard');
         } else {
-            return view('admin');
+            return view('Campaign.index');
         }
     }
 }
