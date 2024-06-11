@@ -26,7 +26,7 @@ class CampaignList extends Component
     public function campaigns()
     {
 //        return Campaign::all();
-        return Campaign::paginate(2);
+        return Campaign::paginate(3);
 
     }
 

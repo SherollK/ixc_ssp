@@ -44,6 +44,12 @@
 {{--                        </x-nav-link>--}}
                     @endif
 
+                    @if(Auth::user()->role == 'admin')
+
+                        <x-nav-link :navigate='false' href="{{ route('filament.admin.auth.login') }}" :active="request()->routeIs('filament.admin.auth.login')">
+                            {{ __('Admin Dashboard') }}
+                        </x-nav-link>
+                    @endif
 
 
                 </div>
