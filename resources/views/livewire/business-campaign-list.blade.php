@@ -22,6 +22,9 @@
                     <button class="font-medium text-blue-600 dark:text-blue-500 hover:underline" wire:click="viewCampaignDetails({{ $campaign->id }})">
                         View
                     </button>
+                    <button class="font-medium text-red-600 dark:text-red-500 hover:underline" wire:click="deleteCampaign({{ $campaign->id }})">
+                        Delete
+                    </button>
                 </td>
             </tr>
         @endforeach

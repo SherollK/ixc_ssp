@@ -26,4 +26,20 @@ class BusinessCampaignList extends Component
     {
         return view('livewire.business-campaign-list');
     }
+
+    public function deleteCampaign($campaignId)
+    {
+        // Find the campaign by ID
+        $campaign = Campaign::find($campaignId);
+
+        // Delete the campaign
+        $campaign->delete();
+
+        // Fetch campaigns created by the authenticated user
+        $this->campaigns = Campaign::where('business_user_id', Auth::id())->get();
+        // Show a success message
+        session()->flash('message', 'Campaign deleted successfully.');
+        // Refresh the page
+        return redirect()->route('business.dashboard');
+    }
 }
