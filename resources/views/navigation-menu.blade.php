@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('campaign.index') }}">
-                        <x-application-mark class="block h-9 w-auto" />
+                        <img src="{{ asset('images/IXC-2-removebg-preview.png') }}" alt="IXC" class="block h-10 w-auto">
                     </a>
                 </div>
 

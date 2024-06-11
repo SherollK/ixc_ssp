@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
-            <x-authentication-card-logo />
+            <img src="{{ asset('images/IXC-2-removebg-preview.png') }}" alt="IXC" class="block h-9 w-auto">
         </x-slot>
 
         <x-validation-errors class="mb-4" />

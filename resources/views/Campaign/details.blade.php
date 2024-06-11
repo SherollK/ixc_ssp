@@ -10,9 +10,9 @@
                     </div>
                 </div>
             </div>
-            <button onclick="Livewire.emit('openModal', 'campaign-request-form', {{ json_encode(['campaign' => $campaign]) }})" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                Apply
-            </button>
+{{--            <button onclick="Livewire.emit('openModal', 'campaign-request-form', {{ json_encode(['campaign' => $campaign]) }})" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">--}}
+{{--                Apply--}}
+{{--            </button>--}}
         </div>
         <div class="mt-8 border-t border-gray-100">
             <p class="mt-2 max-w-2xl text-sm leading-6 text-gray-500">Campaign details</p>
