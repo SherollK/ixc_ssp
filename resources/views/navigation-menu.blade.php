@@ -5,7 +5,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('campaign.index') }}">
                         <x-application-mark class="block h-9 w-auto" />
                     </a>
                 </div>
@@ -14,9 +14,9 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
 
 
-                   <!--<x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                       // {{ __('Dashboard') }}
-                    </x-nav-link>-->
+{{--                   <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">--}}
+{{--                       {{ __('Dashboard') }}--}}
+{{--                    </x-nav-link>--}}
 
                     <x-nav-link href="{{ route('campaign.index') }}" :active="request()->routeIs('campaign.index')">
                         {{ __('Campaign') }}
@@ -26,22 +26,22 @@
                     @if(Auth::user()->role == 'business')
 
                         <x-nav-link href="{{ route('business.dashboard') }}" :active="request()->routeIs('business.dashboard')">
-                            {{ __('Business Dashboard') }}
+                            {{ __('Dashboard') }}
                         </x-nav-link>
 
-                        <x-nav-link href="{{ route('business.campaign') }}" :active="request()->routeIs('business.campaign')">
-                            {{ __('Business Campaign') }}
-                        </x-nav-link>
+{{--                        <x-nav-link href="{{ route('business.campaign') }}" :active="request()->routeIs('business.campaign')">--}}
+{{--                            {{ __('Business Campaign') }}--}}
+{{--                        </x-nav-link>--}}
 
                     @elseif(Auth::user()->role == 'influencer')
 
-                        <x-nav-link href="{{ route('influencer.dashboard') }}" :active="request()->routeIs('influencer.dashboard')">
-                            {{ __('Influencer Dashboard') }}
-                        </x-nav-link>
+{{--                        <x-nav-link href="{{ route('influencer.dashboard') }}" :active="request()->routeIs('influencer.dashboard')">--}}
+{{--                            {{ __('Influencer Dashboard') }}--}}
+{{--                        </x-nav-link>--}}
 
-                        <x-nav-link href="{{ route('influencer.campaign') }}" :active="request()->routeIs('influencer.campaign')">
-                            {{ __('Influencer Campaign') }}
-                        </x-nav-link>
+{{--                        <x-nav-link href="{{ route('influencer.campaign') }}" :active="request()->routeIs('influencer.campaign')">--}}
+{{--                            {{ __('Influencer Campaign') }}--}}
+{{--                        </x-nav-link>--}}
                     @endif
 
 
