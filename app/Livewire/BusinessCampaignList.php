@@ -21,6 +21,13 @@ class BusinessCampaignList extends Component
         // Redirect the user to the campaign details page
         return redirect()->route('business.campaigns.details', $campaignId);
     }
+    public $showCreateForm = false;
+
+    public function showCreateForm()
+    {
+        $this->showCreateForm = true;
+    }
+
 
     public function render()
     {
